@@ -255,9 +255,9 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 for movie_casts in MovieCast.all
-  title2 = MovieCast["movie_title"]
-  character2 = MovieCast["character_name"]
-  actor2 = MovieCast["actor_name"]
+  title2 = movie_casts["movie_title"]
+  character2 = movie_casts["character_played"]
+  actor2 = movie_casts["actor_name"]
   
   puts "#{title2} #{character2} #{actor2}"
 end 
