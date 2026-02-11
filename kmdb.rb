@@ -130,6 +130,102 @@ liam_neason_agent["agent"] = "Alford Hackson"
 liam_neason_agent.save
 
 
+# Batman Begins Cast
+# =================
+cast_1 = MovieCast.new
+cast_1["movie_title"] = "Batman Begins"
+cast_1["actor_name"] = "Christian Bale"
+cast_1["character_played"] = "Bruce Wayne"
+cast_1.save
+
+cast_2 = MovieCast.new
+cast_2["movie_title"] = "Batman Begins"
+cast_2["actor_name"] = "Michael Caine"
+cast_2["character_played"] = "Alfred"
+cast_2.save
+
+cast_3 = MovieCast.new
+cast_3["movie_title"] = "Batman Begins"
+cast_3["actor_name"] = "Liam Neeson"
+cast_3["character_played"] = "Ra's Al Ghul"
+cast_3.save
+
+cast_4 = MovieCast.new
+cast_4["movie_title"] = "Batman Begins"
+cast_4["actor_name"] = "Katie Holmes"
+cast_4["character_played"] = "Rachel Dawes"
+cast_4.save
+
+cast_5 = MovieCast.new
+cast_5["movie_title"] = "Batman Begins"
+cast_5["actor_name"] = "Gary Oldman"
+cast_5["character_played"] = "Commissioner Gordon"
+cast_5.save
+
+# The Dark Knight Cast
+# ====================
+cast_6 = MovieCast.new
+cast_6["movie_title"] = "The Dark Knight"
+cast_6["actor_name"] = "Christian Bale"
+cast_6["character_played"] = "Bruce Wayne"
+cast_6.save
+
+cast_7 = MovieCast.new
+cast_7["movie_title"] = "The Dark Knight"
+cast_7["actor_name"] = "Heath Ledger"
+cast_7["character_played"] = "Joker"
+cast_7.save
+
+cast_8 = MovieCast.new
+cast_8["movie_title"] = "The Dark Knight"
+cast_8["actor_name"] = "Aaron Eckhart"
+cast_8["character_played"] = "Harvey Dent"
+cast_8.save
+
+cast_9 = MovieCast.new
+cast_9["movie_title"] = "The Dark Knight"
+cast_9["actor_name"] = "Michael Caine"
+cast_9["character_played"] = "Alfred"
+cast_9.save
+
+cast_10 = MovieCast.new
+cast_10["movie_title"] = "The Dark Knight"
+cast_10["actor_name"] = "Maggie Gyllenhaal"
+cast_10["character_played"] = "Rachel Dawes"
+cast_10.save
+
+# The Dark Knight Rises Cast
+# ==========================
+cast_11 = MovieCast.new
+cast_11["movie_title"] = "The Dark Knight Rises"
+cast_11["actor_name"] = "Christian Bale"
+cast_11["character_played"] = "Bruce Wayne"
+cast_11.save
+
+cast_12 = MovieCast.new
+cast_12["movie_title"] = "The Dark Knight Rises"
+cast_12["actor_name"] = "Gary Oldman"
+cast_12["character_played"] = "Commissioner Gordon"
+cast_12.save
+
+cast_13 = MovieCast.new
+cast_13["movie_title"] = "The Dark Knight Rises"
+cast_13["actor_name"] = "Tom Hardy"
+cast_13["character_played"] = "Bane"
+cast_13.save
+
+cast_14 = MovieCast.new
+cast_14["movie_title"] = "The Dark Knight Rises"
+cast_14["actor_name"] = "Joseph Gordon-Levitt"
+cast_14["character_played"] = "John Blake"
+cast_14.save
+
+cast_15 = MovieCast.new
+cast_15["movie_title"] = "The Dark Knight Rises"
+cast_15["actor_name"] = "Anne Hathaway"
+cast_15["character_played"] = "Selina Kyle"
+cast_15.save
+
 
 
 # Prints a header for the movies output
@@ -158,6 +254,14 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+for movie_casts in MovieCast.all
+  title2 = MovieCast["movie_title"]
+  character2 = MovieCast["character_name"]
+  actor2 = MovieCast["actor_name"]
+  
+  puts "#{title2} #{character2} #{actor2}"
+end 
+
 
 # Prints a header for the agent's list of represented actors output
 puts ""
@@ -165,15 +269,10 @@ puts "Represented by agent"
 puts "===================="
 puts ""
 
-for movie in A.all
-  title = movie["movie_title"]
-  year = movie["year_released"]
-  rating = movie["MPAA_rating"]
-  studio = movie["studio"]
-  
-  puts "#{title} #{year} #{rating} #{studio}"
-end
 
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
+# 
+#
+#
