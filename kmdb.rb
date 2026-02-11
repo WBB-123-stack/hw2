@@ -87,6 +87,8 @@ MovieCast.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
+puts "Note: migrated tables and created them. See migrate folder. Used rails generate model _____ and rails db:migrate for each."
+
 batman_begins = Movie.new
 batman_begins["movie_title"] = "Batman Begins"
 batman_begins["year_released"] = "2005"
@@ -273,6 +275,10 @@ puts ""
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
-# 
-#
-#
+
+ron_pepperfield_clients = ActorAgent.where({ "agent" => "Ron Pepperfield" })
+
+for client in ron_pepperfield_clients
+  name3 = client["actor_name"]
+  puts name3
+end

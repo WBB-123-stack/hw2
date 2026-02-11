@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[8.1]
       t.string "movie_title"
       t.string "year_released"
       t.string "studio"
-      t.integer "MPAA_rating"
+      t.string "MPAA_rating"
     end
   end
 end
