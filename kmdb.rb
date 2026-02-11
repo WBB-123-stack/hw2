@@ -79,15 +79,52 @@
 # Use `Model.destroy_all` code.
 # TODO!
 # 
-Model.destroy_all
+
 
 # Generate models and tables, according to the domain model.
 # TODO!
+batman_begins = Movie.new
+batman_begins["movie_title"] = "Batman Begins"
+batman_begins["year_released"] = "2005"
+batman_begins["MPAA_rating"] = "PG-13"
+batman_begins["studio"] = "Warner Bros."
+batman_begins.save
+
+dark_knight = Movie.new
+dark_knight["movie_title"] = "Dark Knight"
+dark_knight["year_released"] = "2008"
+dark_knight["MPAA_rating"] = "PG-13"
+dark_knight["studio"] = "Warner Bros."
+dark_knight.save
+
+dark_knight_rises = Movie.new
+dark_knight_rises["movie_title"] = "Dark Knight Rises"
+dark_knight_rises["year_released"] = "2013"
+dark_knight_rises["MPAA_rating"] = "PG-13"
+dark_knight_rises["studio"] = "Warner Bros."
+dark_knight_rises.save
+
 
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+christian_bale_agent = ActorAgent.new
+christian_bale_agent["actor_name"] = "Christian Bale"
+christian_bale_agent["agent"] = "Ron Pepperfield"
+christian_bale_agent.save
+
+michael_cain_agent = ActorAgent.new
+michael_cain_agent["actor_name"] = "Michael Cain"
+michael_cain_agent["agent"] = "Ron Pepperfield"
+michael_cain_agent.save
+
+liam_neason_agent = ActorAgent.new
+liam_neason_agent["actor_name"] = "Liam Neason"
+liam_neason_agent["agent"] = "Alford Hackson"
+liam_neason_agent.save
+
 
 # Prints a header for the movies output
 puts "Movies"
@@ -96,6 +133,17 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+for movies in Movie
+  a = Movie["movie_title"]
+  aa = Movie["year_released"]
+  aaa = Movie["MPAA_rating"]
+  aaaa = Movie["studio"]
+end
+
+puts "#{a}  #{aa}"
+
+
+
 
 # Prints a header for the cast output
 puts ""
@@ -111,6 +159,8 @@ puts ""
 puts "Represented by agent"
 puts "===================="
 puts ""
+
+
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
