@@ -33,7 +33,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_11_012103) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.integer "MPAA_rating"
+    t.string "MPAA_rating"
     t.datetime "created_at", null: false
     t.string "movie_title"
     t.string "studio"

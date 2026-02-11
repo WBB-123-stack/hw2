@@ -78,7 +78,11 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
-# 
+
+Movie.destroy_all
+ActorAgent.destroy_all
+MovieCast.destroy_all
+
 
 
 # Generate models and tables, according to the domain model.
@@ -126,6 +130,8 @@ liam_neason_agent["agent"] = "Alford Hackson"
 liam_neason_agent.save
 
 
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -133,15 +139,14 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
-for movies in Movie
-  a = Movie["movie_title"]
-  aa = Movie["year_released"]
-  aaa = Movie["MPAA_rating"]
-  aaaa = Movie["studio"]
+for movie in Movie.all
+  title = movie["movie_title"]
+  year = movie["year_released"]
+  rating = movie["MPAA_rating"]
+  studio = movie["studio"]
+  
+  puts "#{title} #{year} #{rating} #{studio}"
 end
-
-puts "#{a}  #{aa}"
-
 
 
 
@@ -160,6 +165,14 @@ puts "Represented by agent"
 puts "===================="
 puts ""
 
+for movie in A.all
+  title = movie["movie_title"]
+  year = movie["year_released"]
+  rating = movie["MPAA_rating"]
+  studio = movie["studio"]
+  
+  puts "#{title} #{year} #{rating} #{studio}"
+end
 
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
